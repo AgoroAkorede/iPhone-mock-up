@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*,::before,::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100;
+    font-family:'Lato', san-serif;
+    font-size:16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 50rem;
+    perspective-origin: bottom;
+    background-image: radial-gradient(rgb(231, 231, 231),rgb(124, 121, 121),rgb(104, 101, 101));
+    text-align: center;
+}
+
+
+.iPhone{
+    height: 500px;
+    width: 250px;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    position: relative;
+    border: 2px solid rgba(116, 115, 115, 0.322);
+    box-sizing: border-box;
+    box-shadow:  50px 50px 50px rgba(0, 0, 0, 0.801);
+    transform: rotateX(20deg);
+    -webkit-transform: rotateX(20deg);
+    -moz-transform: rotateX(20deg);
+    -ms-transform: rotateX(20deg);
+    -o-transform: rotateX(20deg);
+    z-index: 5;
+}
+
+.buttonPower{
+    display: flex;
+    height: 3rem;
+    width: 3px;
+    background-color: rgb(36, 36, 36);
+    position: absolute;
+    left: -4px;
+    top: 80px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+.volumeUp{
+    display: flex;
+    height: 2rem;
+    width: 3px;
+    background-color: rgb(36, 36, 36);
+    position: absolute;
+    left: -4px;
+    top: 130px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.volumeDown{
+    display: flex;
+    height: 1.5rem;
+    width: 3px;
+    background-color: rgb(36, 36, 36);
+    position: absolute;
+    left: -4px;
+    top: 160px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.camera{
+    height:8.8px;
+    width:8.8px;
+    background-color: rgb(38, 45, 105);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 6%;
+    left: 32%;
+   box-shadow: inset 0px -3px 2px 0px rgba(256,256,256,0.2);
+
+}
+.smallCircle{
+    height:4px;
+    width:4px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 3%;
+    left: 40%;
+}
+.speaker{
+    height:8px;
+    width:80px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: absolute;
+    top: 6%;
+    left: 40%;
+    border:solid 1px rgb(131, 128, 128);
+}
+.iScreen{
+    background-image: linear-gradient( 45deg,
+        rgb(2, 2, 2),
+    rgb(26, 26, 26));
+    height: 400px;
+    width: 235px;
+    border: solid 2px rgb(49, 49, 49);
+}
+.dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding: 1rem;
+}
+.dot{
+    display: flex;
+    height: 1rem;
+    width: 1rem;
+    z-index: 3;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: grey;
+    margin: 0.25rem;
+}
+.active{
+    background-color: white;
+}
+.wrong{
+    background-color: red;
+}
+.correct{
+    background-color: blue;
+}
+.circleButton{
+    height: 3rem;
+    width: 3rem;
+    background-image: radial-gradient(rgb(29, 28, 28),rgb(0,0,0));
+    border:solid 1px rgb(131, 128, 128);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 7px rgba(31, 31, 31, 0.164);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    bottom:2%;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+.passCodeScreen{
+    height: 100%;
+    width: 100%;
+    /* background-color:rgb(145, 67, 235); */
+    background-image: url(/lockcreen\ image.jpg);
+    background-size: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.passCodeScreen .heading{
+    font-size: 1.2rem;
+    color: rgb(32, 32, 32);
+    text-shadow: 10px 5px 10px solid blue;
+    display: block;
+    align-content: center;
+    width: 100%;
+}
+.passCodeScreen .container{
+    margin-top: 2rem;
+   display: grid;
+   grid-template-columns: repeat(3,minmax(2rem,5rem));
+   grid-template-rows: repeat(5, minmax(2rem,5rem));
+   justify-self: center;
+   align-self: center;
+}
+.passCodeScreen .container .keys{
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border:solid 1px rgb(224, 221, 221);
+    grid-gap: 4rem;
+    justify-content: center;
+    align-content: center;
+    margin: 4px;
+    background-color: rgba(56, 56, 56, 0.507);
+    
+}
+
+.passCodeScreen .container .keys:last-child{
+    transform: translateX(115%);
+    -webkit-transform: translateX(115%);
+    -moz-transform: translateX(115%);
+    -ms-transform: translateX(115%);
+    -o-transform: translateX(115%);
+}
+.bottomIphone{
+    display: flex;
+    height: 10px;
+    width: 100px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.screenUnlocked{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: rgba(134, 130, 130, 0.911);
+    background-image: url(/4f26cdb0af5422a2bbb25d8adee75cd3.jpg);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+    transform: translate(25%,-20%);
+    -webkit-transform: translate(25%,-20%);
+    -moz-transform: translate(25%,-20%);
+    -ms-transform: translate(25%,-20%);
+    -o-transform: translate(25%,-20%);
+    display: none;
+}
+.taskbar{
+    height: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+}
+.battery{
+    display: flex;
+    border: 1px rgb(255, 253, 253) solid;
+    height: 1.2rem;
+    width: 1.5rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: relative;
+    animation: linear 100s batteryChange forwards;
+    -webkit-animation: linear 100s batteryChange forwards;
+    margin-left: 15px;
+
+}
+.wifi{
+    height: 1rem;
+    width: 1.5rem;
+    margin-left: auto;
+}
+.airplane-mode{
+    height: 1rem;
+    width: 1.5rem;
+    margin-left: 60%;
+}
+.battery_bar{
+    display: flex;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    right: 0%;
+    /* animation: linear 100s batteryReduce forwards;
+    -webkit-animation: linear 100s batteryReduce forwards; */
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+/* @keyframes batteryReduce{
+    0%{
+        width: 100%;
+    }
+    80%{
+        width: 20%;
+        background-color: green;
+    }
+    100%{
+        width: 0%;
+        background-color: red;
+    }
+}
+@keyframes batteryChange{
+    0%{
+        border: 1px rgb(255, 253, 253) solid;
+    }
+    95%{
+        border: 1px rgb(255, 253, 253) solid;
+    }
+    100%{
+        border: 1px rgb(255, 0, 0) solid;
+    }
+}
+@keyframes batteryTop{
+    0%{
+        background-color: rgb(255, 253, 253) ;
+    }
+    95%{
+        background-color: rgb(255, 253, 253) ;
+    }
+    100%{
+        background-color: rgb(255, 0, 0) ;
+    }
+} */
+.battery::before{
+    content: " ";
+    display: flex;
+    background-color: white;
+    height: 0.6rem;
+    width: 0.25rem;
+    position: absolute;
+    left: -20%;
+    top: 15%;
+    animation: linear 100s batteryTop forwards;
+    -webkit-animation: linear 100s batteryTop forwards;
+}
+
+.backgroundArea{
+    height: 70%;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: start;
+    overflow: hidden;
+}
+.apps{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,7rem);
+    grid-template-rows: repeat(3,6em);
+    align-content: center;
+    justify-content: start;
+    padding: 1rem;
+    touch-action: none;
+ 
+}
+.app{
+    /* background-color:rgba(221, 214, 214, 0.822); */
+    width: 5rem;
+    height: 5rem;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    grid-gap: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-items: center;
+    align-self: center;
+}
+.musicplayer{
+    width: 15rem;
+    height: 10rem;
+    background-color:rgba(255, 255, 255, 0.822);
+    color: rgb(22, 22, 22);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+img:first-child{
+    width: 5rem;
+    height: 5rem;
+   
+    /* background-color: rgb(0, 0, 0); */
+}
+.togglepage{
+  display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.togglepage > button{
+    height: .5rem;
+    width: .5rem;
+    background-color: white;
+    border:none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 5px;
+}
+.active{
+    background-color: grey;
+}
+
+.hotbar{
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 95%;
+    height: 12.5%;
+    background-color:rgba(133, 131, 131, 0.822);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.phone{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: rgb(30, 190, 30);
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding:0.5rem;
+}
+.message{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: #1ebe1e;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding:0.3rem;
+}
+.music{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: #dd1d57;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding:0.4rem;
+}
+.cameraIcon{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: #eee8e8;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: #090769;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding:0.4rem;
+}
+.card{
+    height: 5rem;
+    width:100%;
+    background-color: rgba(212, 196, 165, 0.767);
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.music-container{
+    background-color: #fff;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+    box-shadow:0 2px 20px rgba(252,169,169,0.6);
+    display:flex;
+    height: 100%;
+    width: 100%;
+    justify-content:center;
+    align-content: center;
+    position: relative;
+
+}
+h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.5rem;
+    margin-left:5px;
+}
+.img-container{
+    display: flex;
+    font-size: 1rem;
+    color:rgb(194, 182, 182);
+    margin: 20px;
+}
+.img-container img{
+    border-radius: 20%;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    object-fit: cover;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    margin: 5px;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.action-btn{
+    background-color: #fff;
+    border: 0;
+    color: rgb(149, 149, 149);
+    font-size: 1rem;
+    margin:0 7px;
+    transition: all 0.3s linear forwards;
+    -webkit-transition: all 0.3s linear forwards;
+    -moz-transition: all 0.3s linear forwards;
+    -ms-transition: all 0.3s linear forwards;
+    -o-transition: all 0.3s linear forwards;
+}
+.action-btn:focus{
+    color: black;
+}
+.action-btn.action-btn-big{
+    color: rgb(83, 83, 83);
+    font-size: 1.5rem;
+}
+.action-btn.action-btn-big:focus{
+    color: black;
+}
+.title{
+    font-size: 1rem;
+}
+.progress-container{
+    background-color: rgb(177, 176, 176);
+    border-radius: 5px;
+    height: 4px;
+    cursor: pointer;
+    margin: 7px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.progress{
+    background-color: rgb(43, 41, 43);
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+    -webkit-transition: width 0.1s linear;
+    -moz-transition: width 0.1s linear;
+    -ms-transition: width 0.1s linear;
+    -o-transition: width 0.1s linear;
+  
+}
+@media (min-width:51.25em){
+    body{
+        perspective: 70rem;
+    }
+
+    .iPhone{
+        height: 1000px;
+        width: 500px;
+    }
+    .buttonPower{
+        height: 6rem;
+        width: 6px;
+        position: absolute;
+        left: -8px;
+        top: 130px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .volumeUp{
+        display: flex;
+        height: 4rem;
+        width: 6px;
+        background-color: rgb(36, 36, 36);
+        position: absolute;
+        left: -8px;
+        top: 230px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .volumeDown{
+        display: flex;
+        height: 4rem;
+        width: 6px;
+        position: absolute;
+        left: -8px;
+        top: 300px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .camera{
+        height:17.6px;
+        width:17.6px;
+    }
+    .smallCircle{
+        height:8px;
+        width:8px;
+    }
+    .circleButton{
+        height: 6rem;
+        width: 6rem;
+    }
+    .speaker{
+        height:16px;
+        width:160px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+    .iScreen{
+        height: 800px;
+        width: 470px;
+    }
+    .passCodeScreen .heading{
+        font-size: 3rem;
+    }
+    .passCodeScreen .container{
+        margin-top: 2rem;
+       display: grid;
+       grid-template-columns: repeat(3,minmax(5rem,10rem));
+       grid-template-rows: repeat(5, minmax(5rem,11rem));
+       justify-self: center;
+       align-self: center;
+    }
+    .passCodeScreen .container .keys{
+        padding: 2rem;
+        font-size: 3.5rem;
+    }
+    .taskbar{
+        height: 6%;
+        width: 95%;
+        font-size: 3rem;
+    }
+    .battery{
+    height: 3rem;
+    width: 3rem;
+    border-radius:8 px;
+    -webkit-border-radius:8 px;
+    -moz-border-radius:8 px;
+    -ms-border-radius:8 px;
+    -o-border-radius:8 px;
+    }   
+    .wifi{
+        height: 2rem;
+        width: 3rem;
+        margin-left: auto;
+    }
+    .airplane-mode{
+        height: 2rem;
+        width: 3rem;
+        margin-left: 60%;
+    }
+    .battery::before{
+        content: " ";
+        display: flex;
+        background-color: white;
+        height: 1.6rem;
+        width: 0.5rem;
+        position: absolute;
+        left: -20%;
+        top: 25%;
+    }
+    .apps{
+        display: grid;
+        grid-template-columns: repeat(6,14rem);
+        grid-template-rows: repeat(3,14em);
+        align-content: center;
+        justify-content: start;
+        padding: 1rem;
+        touch-action: none;
+    }
+    .app{
+        width: 10rem;
+        height: 10rem;
+    }
+    .musicplayer{
+        width: 30rem;
+        height: 17rem;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+}
+    img:first-child{
+        width: 10rem;
+        height: 10rem;
+    }
+    .togglepage > button{
+        height: 1rem;
+        width: 1rem;
+        margin: 10px;
+    }
+    .phone{
+        margin: 1rem;
+        width: 6rem;
+        height: 6rem;
+        padding:1rem;
+    }
+    .message{
+        margin: 1rem;
+        width: 6rem;
+        height: 6rem;
+        padding:1rem;
+    }
+    .music{
+        margin: 1rem;
+        width: 6rem;
+        height: 6rem;
+        padding:1rem;
+    }
+    .cameraIcon{
+        margin: 1rem;
+        width: 6rem;
+        height: 6rem;
+        padding:1rem;
+    }
+    .cameraIcon:first-child{
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        background-color: #eee8e8;
+        margin: 1rem;
+        width: 8rem;
+        height: 8rem;
+       
+    }
+    h4{
+        font-size: 3rem;
+        margin-left:80px;
+    }
+    .img-container{
+    display: flex;
+    font-size: 2rem;
+    color:rgb(194, 182, 182);
+    margin-left: 80px;
+    }
+    .action-btn{
+        font-size: 1rem;
+        margin:0 14px;
+    }
+    .action-btn.action-btn-big{
+        color: rgb(83, 83, 83);
+        font-size: 3rem;
+    }
+    .title{
+        font-size: 1rem;
+    }
+    .progress-container{
+        border-radius: 10px;
+        height: 8px;
+        cursor: pointer;
+        margin: 14px 0;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}

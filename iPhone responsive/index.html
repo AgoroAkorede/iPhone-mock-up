@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <title>iPhone responsive</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+<body>
+    <div class="iPhone" id="iPhone">
+       
+        <div class="buttonPower" id="buttonPower"></div>
+        <div class="volumeUp"></div>
+        <div class="volumeDown"></div>
+        <div class="iPhoneInner">
+            <div class="camera"></div>
+            <div class="smallCircle"></div>
+            <div class="speaker"></div>
+            <div class="iScreen">
+                <div class="passCodeScreen" id="passCodeScreen">
+                    <h1 class="heading">
+                        Your Pin Contains 4 digits
+                    </h1>
+                    <div class="container">
+                        <button id="keys" class="keys">1</button>
+                        <button id="keys" class="keys">2</button>
+                        <button id="keys" class="keys">3</button>
+                        <button id="keys" class="keys">4</button>
+                        <button id="keys" class="keys">5</button>
+                        <button id="keys" class="keys">6</button>
+                        <button id="keys" class="keys">7</button>
+                        <button id="keys" class="keys">8</button>
+                        <button id="keys" class="keys">9</button>
+                        <button id="keys" class="keys">0</button>
+                        <button id="ok" class="keys">OK</button>
+                    </div>
+
+            </div>
+            <div class="screenUnlocked" id="screenUnlocked">
+                <div class="taskbar">
+                    <div class="time" id="taskbarTime"> Time</div>
+
+                    <div class="airplane-mode" id="airplane-mode">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plane" class="svg-inline--fa fa-plane fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M480 192H365.71L260.61 8.06A16.014 16.014 0 0 0 246.71 0h-65.5c-10.63 0-18.3 10.17-15.38 20.39L214.86 192H112l-43.2-57.6c-3.02-4.03-7.77-6.4-12.8-6.4H16.01C5.6 128-2.04 137.78.49 147.88L32 256 .49 364.12C-2.04 374.22 5.6 384 16.01 384H56c5.04 0 9.78-2.37 12.8-6.4L112 320h102.86l-49.03 171.6c-2.92 10.22 4.75 20.4 15.38 20.4h65.5c5.74 0 11.04-3.08 13.89-8.06L365.71 320H480c35.35 0 96-28.65 96-64s-60.65-64-96-64z"></path></svg>
+                    </div>
+
+                    <div id="wifi" class="wifi"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="wifi" class="svg-inline--fa fa-wifi" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M319.1 351.1c-35.35 0-64 28.66-64 64.01s28.66 64.01 64 64.01c35.34 0 64-28.66 64-64.01S355.3 351.1 319.1 351.1zM320 191.1c-70.25 0-137.9 25.6-190.5 72.03C116.3 275.7 115 295.9 126.7 309.2C138.5 322.4 158.7 323.7 171.9 312C212.8 275.9 265.4 256 320 256s107.3 19.88 148.1 56C474.2 317.4 481.8 320 489.3 320c8.844 0 17.66-3.656 24-10.81C525 295.9 523.8 275.7 510.5 264C457.9 217.6 390.3 191.1 320 191.1zM630.2 156.7C546.3 76.28 436.2 32 320 32S93.69 76.28 9.844 156.7c-12.75 12.25-13.16 32.5-.9375 45.25c12.22 12.78 32.47 13.12 45.25 .9375C125.1 133.1 220.4 96 320 96s193.1 37.97 265.8 106.9C592.1 208.8 600 211.8 608 211.8c8.406 0 16.81-3.281 23.09-9.844C643.3 189.2 642.9 168.1 630.2 156.7z"></path></svg></div>
+                    <div class="battery" id="battery">
+                        <div class="battery_bar" id="battery_bar">
+                        </div>
+                    </div>
+                </div>
+                <div class="backgroundArea">
+                 <div id="apps" class="apps">
+                     <div class="app"> 
+                        <div data-app class="cameraIcon">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="camera" class="svg-inline--fa fa-camera" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"></path></svg>
+                        </div>
+                     </div>
+                     <div data-app class="app"><img src="/app img/netflix.png" alt="netflix"></div>
+                     <div data-app class="app"> <img src="/app img/tik-tok.png" alt="tik-tok"></div>
+                     <div data-app class="app"><img src="/app img/whatsapp.png" alt="whatsapp"></div>
+                     <div data-app class="app"><img src="/app img/youtube.png" alt="youtube"></div>
+                     <div data-app class="app"><img src="/app img/telegram.png" alt="telegram"></div>
+                     <div data-app class="app"><img src="/app img/linkedin.png" alt=""></div>
+                     <div data-app class="app"><img src="/app img/twitter.png" alt="twitter"></div>
+                     <div data-app class="app"><img src="/app img/pinterest.png" alt="pinterest"></div>
+                     <div data-app class="app"><img src="/app img/calendar.png" alt="calendar"></div>
+                     <div data-app class="app"><img src="/app img/safari.png" alt="safari"></div>
+                     <div data-app class="app"><img src="/app img/settings.png" alt="settings"></div>
+                     <div data-app class="app"> <img src="/app img/spotify.png" alt="spotify"></div>
+                     <div data-app class="app"> <img src="/app img/instagram.png" alt="instagram"></div>
+                     <div data-app class="app"><img src="/app img/facebook.png" alt="facebook"></div>
+                     <div data-app class="app"></div>
+
+                     <div class="musicplayer"> 
+                         <!-- <h1>musicPlayer</h1> -->
+                         <div class="music-container" id="music-container">
+                            <div class="music-info">
+                                <h4 id="title">Humble</h4>
+                                 <div class="img-container">
+                                    <img src="/lockcreen image.jpg" alt="Kendrick Lamar" id="cover">
+                                    <p>By Kendrick Lamar</p>
+                                </div>
+                                <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                                <audio
+                                
+                                 src="/music/Kendrick Lamar - Humble..mp3" id="audio"></audio>
+                               
+                                <div class="navigation">
+                                    <button id="prev" class="action-btn"><i class="fas fa-backward"></i></button>
+
+                                    <button id="play" class="action-btn action-btn-big"><i class="fas fa-play"></i></button>
+
+                                    <button id="next" class="action-btn"><i class="fas fa-forward"></i></button>
+                                </div>
+
+                                <!-- <div class="sound-panel">
+                                    <button id="low-volume" class="action-btn"><i class="fas fa-solid fa-volume-low"></i></button>
+
+                                    <button id="lowVolume" class="action-btn"></button>
+                                </div> -->
+                            </div>
+                         </div>
+                     </div>
+                 </div>
+                </div>
+                <div class="togglepage">
+                    <button id="leftTogglepage"></button>
+                    <button id="rightTogglepage"></button>
+                </div>
+                <div class="hotbar">
+                    <div class="phone"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+                    </div>
+
+                    <div class="cameraIcon">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="camera" class="svg-inline--fa fa-camera" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"></path></svg>
+                    </div>
+
+
+
+                    <div class="message"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comment" class="svg-inline--fa fa-comment" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z"></path></svg></div>
+
+                    <div class="music">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="music" class="svg-inline--fa fa-music" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M511.1 367.1c0 44.18-42.98 80-95.1 80s-95.1-35.82-95.1-79.1c0-44.18 42.98-79.1 95.1-79.1c11.28 0 21.95 1.92 32.01 4.898V148.1L192 224l-.0023 208.1C191.1 476.2 149 512 95.1 512S0 476.2 0 432c0-44.18 42.98-79.1 95.1-79.1c11.28 0 21.95 1.92 32 4.898V126.5c0-12.97 10.06-26.63 22.41-30.52l319.1-94.49C472.1 .6615 477.3 0 480 0c17.66 0 31.97 14.34 32 31.99L511.1 367.1z"></path></svg>
+                    </div>
+                    
+                  
+                </div>
+            </div>
+        </div>
+
+            
+        </div>
+        <button id="circleButton" class="circleButton"></button>
+    </div>
+</body>
+</html>
